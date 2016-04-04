@@ -1,0 +1,13 @@
+{
+  "name": "siboney",
+  "version": "0.0.1",
+  "description": "Siboney is a clean, modern theme with beautiful fonts designed and developed by [Wenmin Chen](http://www.wenminchen.com). It is built to be part of a personal portfolio and it's not intented to be released for public use.",
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wenminchen/siboney.git"
+  },
+  "author": "Wenmin Chen",
+  },
+  "homepage": "https://github.com/wenminchen/siboney#readme"
+}
