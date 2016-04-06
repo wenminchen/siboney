@@ -1,0 +1,64 @@
+/*--------------------------------------------------------------
+# Carousel
+--------------------------------------------------------------*/
+.carousel-caption {
+ background: $color_bg-caption;
+ padding: .3em;
+}
+
+.carousel-indicators {
+  bottom:-3em; 
+  li {
+    background-color: $color_bg-carousel-indicator;
+  }
+  .active {
+    background-color: $color_bg-carousel-indicator-active;
+  }
+}
+
+.carousel-inner {
+   margin-bottom: 3em;
+}
+
+.carousel-control .control-prev,
+.carousel-control .control-next {
+  @include position (absolute, 45%);
+  z-index: 5;
+  display: inline-block;
+}
+
+.carousel-control .control-prev {
+  left: -50%;
+}
+
+.carousel-control .control-next {
+  right: -50%;
+}
+
+.carousel-control .fa{
+    color: $color_bg-carousel-control;
+}
+
+/*testimonial carousel*/ 
+.testimonials{
+  margin: 0;
+  position: relative;
+  padding: .3em .7em .7em;
+  #testiCarousel{
+    padding: 0 1em;
+  }
+  .carousel-control.left, .carousel-control.right {
+    background-image:none !important;
+    @include position (absolute, 45%);
+      z-index: 5;
+      display: inline-block;
+  }
+  .carousel-control.left{
+    left: -10%;
+    top: .7em;
+  }
+  .carousel-control.right{
+    left: 96%;
+     top: .7em;
+  }
+}

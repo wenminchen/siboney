@@ -1,0 +1,76 @@
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+body {
+    color: $color_text-main;
+    font-family: $font_main;
+    @include font-size(1.5);
+    @include line-height(24);
+}
+
+span.name{
+  color: $color_text-logo;
+  font-family: $font_logo;
+  font-weight: 700;
+  @include font-size(3.2);
+  @include position (absolute, $top: .9em, $left: 3em); 
+  @media (min-width: $screen-sm-min + 1) {
+    @include font-size(3.5);
+    @include position (absolute, $top: .9em, $left: 6.3em); 
+  }
+}
+
+span.tagline{
+  color: $font_tagline;
+  font-weight: 600;
+  @include font-size(1.6);
+  @include position (absolute, $top: 3.3em, $left: 6.5em); 
+  @media (min-width: $screen-sm-min + 1) {
+    @include font-size(1.8);
+    @include position (absolute, $top: 3.3em, $left: 13em); 
+  }
+}
+
+ul,li{
+	list-style:none;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+h2 a {
+  color: $color_text-headings;
+  font-family: $font_headings;
+  letter-spacing: 2px;
+}
+
+blockquote {
+  border-left: none;
+  @include font-size(1.5);
+  position: relative;
+	&:before {
+    font-family: 'FontAwesome';
+    content: "\f10d";
+    display: block;
+    @include position (absolute, $top: .3em, $left: .7em);
+  }
+  p {
+    padding-left: .7em;
+  }
+}
+
+.copyright{
+    color: $color_text-main;
+    font-family: $font_footer;
+    @include font-size(1.1);
+    font-weight: bold;
+  }
+
+.modal-title{
+  color: $color_text-headings;
+  font-family: $font_main;
+  @include font-size(2.3);
+}

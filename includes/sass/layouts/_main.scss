@@ -1,0 +1,17 @@
+/*--------------------------------------------------------------
+# Main
+--------------------------------------------------------------*/ 
+#main-gray{
+  background: $color_bg-body;
+  padding-bottom: 1.6em;
+}
+
+.contact {
+    padding: 1.6em .7em 1em;
+    h2{
+        font-family: $font_nav;
+    }
+    textarea {
+        height: 125px;
+    }
+}

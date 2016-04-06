@@ -1,0 +1,47 @@
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+/* Colors */
+$color_bg-header: #fdfdfd;
+$color_bg-body-hp: #fdfdfd;
+$color_bg-body: #f3f6f6;
+$color_bg-featured: #e1e7e7;
+$color_bg-carousel-control: #4eb55c; //green
+$color_bg-carousel-indicator: lighten(#999, 15%);
+$color_bg-carousel-indicator-active: #6a6a6a;
+$color_bg-caption: rgba(0, 0, 0, 0.4);
+$color_bg-button: #6a6a6a; // dark gray
+$color_bg-button-hover: #27bec7; //blue
+$color_bg-scrollbar: #ff7e00; //red
+$color_bg-scrollbar-hover: #6a6a6a; // dark gray 
+
+$color_text-main: #6a6a6a; 
+$color_text-headings: #ff7e00; //orange
+$color_text-logo: #4eb55c; 
+
+$color_link: #6a6a6a;
+$color_link-visited: #27bec7; //blue
+$color_link-hover: #27bec7; //blue
+$color_link-nav-hover: #4eb55c; //green
+$color_link-featured: #4eb55c;
+
+$color_hr: lighten(#999, 15%);
+$color_border-button: #fff;
+
+/* Font Styles */
+$font_main: 'Josefin Sans', sans-serif;
+$font_headings: 'Amatic SC', sans-serif;
+$font_nav: 'Amatic SC', sans-serif;
+$font_logo: 'Amatic SC', sans-serif;
+$font_tagline: 'Josefin Sans', sans-serif;
+$font_footer: 'Open Sans', sans-serif;
+
+/* Font sizes */
+$font_root-small: 13px;
+$font_root-midtolg: 16px;
+
+/* Media Queries Breakpoints */
+$screen-xs-min: 480px;
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;

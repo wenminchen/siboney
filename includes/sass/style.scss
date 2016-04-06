@@ -1,0 +1,45 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1. BASE
+	# Mixins
+	# Variables
+	# Global
+2. COMPONENTS
+	# Typography
+	# Images
+	# Navigation
+	# Buttons
+	# Carousel
+	# Forms
+	# Scrollbar
+	# Accordian
+3. LAYOUTS
+	# Header
+	# Main
+	# Sidebar
+	# Featured
+	# Footer
+--------------------------------------------------------------*/
+
+/* 1. BASE - Base styles, variables, mixins, etc */
+@import 'base/_mixins.scss';
+@import 'base/_variables.scss';
+@import 'base/_global.scss';
+
+/* 2. COMPONENTS - Individual site components */
+@import 'components/_typography.scss';
+@import 'components/_images.scss';
+@import 'components/_nav.scss';
+@import 'components/_buttons.scss';
+@import 'components/_carousel.scss';
+@import 'components/_forms.scss';
+@import 'components/_scrollbar.scss';
+@import 'components/_accordian.scss';
+
+/* 3. LAYOUTS - Page layout styles */
+@import 'layouts/_header.scss';
+@import 'layouts/_main.scss';
+@import 'layouts/_sidebar.scss';
+@import 'layouts/_featured.scss';
+@import 'layouts/_footer.scss';

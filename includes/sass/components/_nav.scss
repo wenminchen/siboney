@@ -1,0 +1,60 @@
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+.navbar {
+	margin-top: 1.5em;
+}
+
+.navbar-default {
+  background-color: $color_bg-header;
+  border-color: $color_border-button;
+  position: relative;
+  .navbar-nav > li {
+    > a {
+      color: $color_text-main;
+    }
+    > a:hover, 
+      a:focus{
+        color: $color_link-nav-hover;
+    }
+  }
+}
+
+.nav li {
+  font-family: $font_nav;
+  font-weight: bold;
+  @include font-size(2.3);
+}
+
+.navbar-nav{
+  background-color: $color_bg-featured;
+  float: right;
+  position: relative;
+  width: 125px;
+  z-index: 99999999;
+  @media (min-width: $screen-sm-min + 1) {
+    background-color: $color_bg-header;
+    width: 375px;
+  }
+}
+
+.paging-navigation ul {
+    margin-top: 3em;
+}
+
+.paging-navigation li { 
+  display: inline; 
+}
+
+a.page-numbers,
+span.page-numbers {
+     padding: .3em .7em;
+     border: 1px solid $color_text-logo;
+}
+
+.paging-navigation .current {
+    font-weight: bold;
+}
+
+
+

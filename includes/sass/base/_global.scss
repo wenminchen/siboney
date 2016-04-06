@@ -1,0 +1,62 @@
+/*--------------------------------------------------------------
+# Global
+--------------------------------------------------------------*/
+/* Google fonts */
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Josefin+Sans:400,600italic|Open+Sans);
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+    @media (min-width: $screen-sm-min + 1) {
+      background: url("../img/birds-cranes.png") no-repeat;
+    }
+}
+
+.container {
+  padding: 0 2em;
+  margin: 0 auto;
+  @media (min-width: $screen-sm-min + 1) and (max-width: $screen-md-min) {
+    padding: 0 3.2em;
+  }
+  @media (min-width: $screen-md-min + 1) {
+    padding: 0 6.5em;
+  }
+}
+
+a{
+	color:$color_link;
+}
+
+a:focus, 
+a:hover {
+  color: $color_link-hover;
+}
+
+hr {
+	background-color: $color_hr;
+	height: 1px;
+}
+
+.by-line {
+  padding-bottom: 12px;
+}
+
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1em;
+}
+
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1em;
+}
+
+.aligncenter {
+  clear: both;
+  @include center-block;
+}
+

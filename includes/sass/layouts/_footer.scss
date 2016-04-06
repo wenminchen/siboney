@@ -1,0 +1,16 @@
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer{
+	@include line-height(24);
+	padding-top: 1em;
+	.container {
+  		padding: 0 1.6em;
+  		@media (min-width: $screen-sm-min + 1) and (max-width: $screen-md-min) {
+    		padding: 0 3.2em;
+  		}
+  		@media (min-width: $screen-md-min + 1) {
+    		padding: 0 10em;
+  		}
+	}
+}

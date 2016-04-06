@@ -1,0 +1,21 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.header {
+  height: 110px; 
+  position: relative;
+  @media (min-width: $screen-sm-min + 1) {
+    height: 130px;
+  }
+}
+
+.header a {
+  color: $color_link-nav-hover;
+}
+
+.logo {
+  @include position (absolute, $top: 1em, $left: 1.6em);
+  @media (min-width: $screen-sm-min + 1) {
+    @include position (absolute, $top: 1em, $left: 8.5em);
+  }
+}

@@ -1,0 +1,14 @@
+/*--------------------------------------------------------------
+# Sidebar
+--------------------------------------------------------------*/
+#sidebar {
+	margin: 0 0 2em;
+}
+
+.sidebar-featured {
+	background-color: $color_bg-body;
+    padding: .3em .7em 1em;
+    h2{
+        font-family: $font_nav;
+    }
+}

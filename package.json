@@ -1,13 +1,26 @@
 {
   "name": "siboney",
   "version": "0.0.1",
-  "description": "Siboney is a clean, modern theme with beautiful fonts designed and developed by [Wenmin Chen](http://www.wenminchen.com). It is built to be part of a personal portfolio and it's not intented to be released for public use.",
+  "description": "Siboney is a clean, modern theme with beautiful fonts designed and developed by Wenmin Chen.",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wenminchen/siboney.git"
+    "url": "git+https://github.com/wenminchen/siboney.git"
   },
   "author": "Wenmin Chen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wenminchen/siboney/issues"
   },
-  "homepage": "https://github.com/wenminchen/siboney#readme"
+  "homepage": "https://github.com/wenminchen/siboney#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0"
+  }
 }

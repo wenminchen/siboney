@@ -1,0 +1,36 @@
+/*--------------------------------------------------------------
+# Buttons
+--------------------------------------------------------------*/
+.btn-primary{
+	background-color: $color_bg-button;
+	@include add-border(2px, $color_border-button, all);
+}
+
+.btn-primary:hover{
+	background:$color_bg-button-hover; 
+	@include add-border(2px, $color_border-button, all);
+}
+
+.btn-submit {
+	margin-top: 1em;
+}
+
+.read-more {
+  	text-align: right;
+  	padding-top: 1.5em;
+  	padding-right: 1em;
+  a {
+    background: url('../img/arrows.png') no-repeat -3px -5px;
+    width: 94px;
+    height: 19px;
+    overflow: hidden;
+    display: inline-block;
+    text-indent: 100%;
+    white-space: nowrap;
+  }
+  a:hover {
+    background: url('../img/arrows.png') no-repeat -3px -35px;
+    width: 94px;
+    height: 19px;
+  }
+}

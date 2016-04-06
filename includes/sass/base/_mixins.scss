@@ -1,0 +1,89 @@
+/*--------------------------------------------------------------
+# Mixins (see https://web-design-weekly.com/2013/05/12/handy-sass-mixins/ for more)
+--------------------------------------------------------------*/
+@mixin fontFace($family,$src,$style: normal,$weight: normal) {
+	@font-face {
+		font-family: $family;
+		src: url('#{$src}.eot'); // IE9 compat
+		src: url('#{$src}.eot?#iefix') format('embedded-opentype'), // IE8 and below
+			url('#{$src}.woff') format('woff'), // standards
+			url('#{$src}.ttf') format('truetype'), // Safari, Android, iOS
+			url('#{$src}.svg##{$family}') format('svg'); // legacy iOS
+		font-style: $style;
+		font-weight: $weight;
+	}
+}
+
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px; //fallback for old browsers
+  font-size: $sizeValue + rem;
+}
+
+@mixin fontSize-small($size) {
+font-size: $size; // Fallback in px.
+font-size: ($size / $font_root-small) * 1rem;
+}
+
+@mixin fontSize-midtolg($size) {
+font-size: $size; // Fallback in px.
+font-size: ($size / $font_root-midtolg) * 1rem;
+}
+
+@mixin line-height($heightValue: 12 ){
+    line-height: $heightValue + px; //fallback for old browsers
+    line-height: (0.125 * $heightValue) + rem;
+}
+
+@mixin add-border($size, $color, $position){
+	@if $position == 'all'{
+		border:$size solid $color;
+	} @else if $position == 'top'{
+		border-top:$size solid $color;
+	} @else if $position == 'bottom'{
+		border-bottom:$size solid $color;
+	} @else if $position == 'right'{
+		border-right:$size solid $color;
+	} @else if $position == 'left'{
+		border-left:$size solid $color;
+	} @else if $position == 'top-bottom'{
+		border-top:$size solid $color;
+		border-bottom:$size solid $color;
+	} @else if $position == 'right-left'{
+		border-left:$size solid $color;
+		border-right:$size solid $color;
+	}
+}
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+/* Quickly center any element within its parent. Requires width or max-width to be set.*/
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}

@@ -1,0 +1,8 @@
+/*--------------------------------------------------------------
+# Accordian
+--------------------------------------------------------------*/
+.panel-default>.panel-heading {
+    color: $color_text-headings;
+    background-color: $color_bg-featured;
+    border-color: $color_hr;
+}
