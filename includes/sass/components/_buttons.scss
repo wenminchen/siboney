@@ -2,13 +2,17 @@
 # Buttons
 --------------------------------------------------------------*/
 .btn-primary{
-	background-color: $color_bg-button;
-	@include add-border(2px, $color_border-button, all);
-}
-
-.btn-primary:hover{
-	background:$color_bg-button-hover; 
-	@include add-border(2px, $color_border-button, all);
+  background-color: $color_bg-button;
+  @include add-border(2px, $color_border-button, all);
+  &:visited {
+    background-color: $color_bg-button;
+    @include add-border(2px, $color_border-button, all);
+  }
+  &:focus,
+  &:hover{
+    background:$color_bg-button-hover; 
+    @include add-border(2px, $color_border-button, all);
+  }
 }
 
 .btn-submit {

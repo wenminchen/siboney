@@ -74,8 +74,6 @@ Credits:
 /*--------------------------------------------------------------
 # Global
 --------------------------------------------------------------*/
-/* Google fonts */
-@import url(https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Josefin+Sans:400,600italic|Open+Sans);
 html {
   font-size: 62.5%; }
 
@@ -95,10 +93,10 @@ html {
 
 a {
   color: #6a6a6a; }
-
-a:focus,
-a:hover {
-  color: #27bec7; }
+  a:visited {
+    color: #6a6a6a; }
+  a:focus, a:hover {
+    color: #27bec7; }
 
 hr {
   background-color: #bfbfbf;
@@ -272,10 +270,12 @@ span.page-numbers {
 .btn-primary {
   background-color: #6a6a6a;
   border: 2px solid #fff; }
-
-.btn-primary:hover {
-  background: #27bec7;
-  border: 2px solid #fff; }
+  .btn-primary:visited {
+    background-color: #6a6a6a;
+    border: 2px solid #fff; }
+  .btn-primary:focus, .btn-primary:hover {
+    background: #27bec7;
+    border: 2px solid #fff; }
 
 .btn-submit {
   margin-top: 1em; }

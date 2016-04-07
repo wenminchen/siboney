@@ -1,9 +1,6 @@
 /*--------------------------------------------------------------
 # Global
 --------------------------------------------------------------*/
-/* Google fonts */
-@import url(https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Josefin+Sans:400,600italic|Open+Sans);
-
 html {
   font-size: 62.5%;
 }
@@ -26,12 +23,15 @@ body {
 }
 
 a{
-	color:$color_link;
-}
+  color:$color_link;
+  &:visited {
+    color: $color_link;
+  }
+  &:focus, 
+  &:hover {
+    color: $color_link-hover;
 
-a:focus, 
-a:hover {
-  color: $color_link-hover;
+  }
 }
 
 hr {
