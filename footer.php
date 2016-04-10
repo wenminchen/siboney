@@ -7,28 +7,27 @@
  * @package siboney
  */
 ?>
-			</div><!-- close .*-inner (main-content or sidebar, depending if sidebar is used) -->
-		</div><!-- close .row -->
-	</div><!-- close .container -->
-</div><!-- close .main-content -->
+      </div><!-- end container -->
+    </section><!-- end main section -->
 
-<footer id="colophon" class="site-footer" role="contentinfo">
-<?php // substitute the class "container-fluid" below if you want a wider content area ?>
-	<div class="container">
-		<div class="row">
-			<div class="site-footer-inner col-sm-12">
-
-				<div class="site-info">
-					<?php do_action( 'siboney_credits' ); ?>
-					<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'siboney' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'siboney' ), 'WordPress' ); ?></a>
-					<span class="sep"> | </span>
-                    <a class="credits" href="http://themekraft.com/" target="_blank" title="Themes and Plugins developed by Themekraft" alt="Themes and Plugins developed by Themekraft"><?php _e('Themes and Plugins developed by Themekraft.','siboney') ?> </a>
-				</div><!-- close .site-info -->
-
-			</div>
-		</div>
-	</div><!-- close .container -->
-</footer><!-- close #colophon -->
+    <!-- footer -->
+    <footer id="footer" role="contentinfo">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-md-offset-1 social-icons">
+            <p>
+              <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+              <a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
+              <a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>
+              <a href="#"><i class="fa fa-envelope fa-2x"></i></a>
+            </p>    
+          </div><!-- end social icons -->
+          <div class="col-md-8 copyright">
+            <p class="copyright">&copy; <script>document.write(new Date().getFullYear())</script> Siboney Template<span class="hidden-xs hidden-sm">. All Rights Reserved. </span>&#124; Website by Wenmin Chen</p>  
+          </div> <!-- end copyright -->
+        </div><!-- end row -->
+      </div><!-- end footer container -->
+    </footer>
 
 <?php wp_footer(); ?>
 

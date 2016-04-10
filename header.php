@@ -24,72 +24,38 @@
 <body <?php body_class(); ?>>
 	<?php do_action( 'before' ); ?>
 
-<header id="masthead" class="site-header" role="banner">
-<?php // substitute the class "container-fluid" below if you want a wider content area ?>
+<header id="header" class="header" role="banner">
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+               <span class="sr-only"><?php _e('Toggle navigation','siboney') ?> </span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>">
+               <!--<img src="img/peaceful_yan.png" class="logo" alt="site logo">-->
+               <?php if ( has_site_icon() ) : ?>
+					<?php $site_icon = esc_url( get_site_icon_url( 75 ) ); ?>
+					<img class="site-icon logo" src="<?php echo $site_icon; ?>" alt="site logo" >       
+               <?php endif; ?>
+               <span class="name"><?php bloginfo('name');?></span><br />
+               <span class="tagline"><?php bloginfo( 'description' ); ?></span></a>
+            </div><!-- end navbar-header-->
+
+            <!-- The WordPress Menu goes here -->
+			<?php wp_nav_menu(
+				array(
+					'theme_location' 	=> 'primary',
+					'container'         => 'div',
+					'container_class'   => 'collapse navbar-collapse',
+					'menu_class' 		=> 'nav navbar-nav navbar-right'
+				)
+			); ?>
+        </div><!-- end container -->
+    </nav><!-- end navbar-->
+</header>
+
+<section class="main">
 	<div class="container">
-		<div class="row">
-			<div class="site-header-inner col-sm-12">
-
-				<?php $header_image = get_header_image();
-				if ( ! empty( $header_image ) ) { ?>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-						<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
-					</a>
-				<?php } // end if ( ! empty( $header_image ) ) ?>
-
-
-				<div class="site-branding">
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<p class="lead"><?php bloginfo( 'description' ); ?></p>
-				</div>
-
-			</div>
-		</div>
-	</div><!-- .container -->
-</header><!-- #masthead -->
-
-<nav class="site-navigation">
-<?php // substitute the class "container-fluid" below if you want a wider content area ?>
-	<div class="container">
-		<div class="row">
-			<div class="site-navigation-inner col-sm-12">
-				<div class="navbar navbar-default">
-					<div class="navbar-header">
-						<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-							<span class="sr-only"><?php _e('Toggle navigation','siboney') ?> </span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-	
-						<!-- Your site title as branding in the menu -->
-						<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-					</div>
-
-					<!-- The WordPress Menu goes here -->
-					<?php wp_nav_menu(
-						array(
-							'theme_location' 	=> 'primary',
-							'depth'             => 2,
-							'container'         => 'div',
-							'container_class'   => 'collapse navbar-collapse',
-							'menu_class' 		=> 'nav navbar-nav',
-							'fallback_cb' 		=> 'wp_bootstrap_navwalker::fallback',
-							'menu_id'			=> 'main-menu',
-							'walker' 			=> new wp_bootstrap_navwalker()
-						)
-					); ?>
-
-				</div><!-- .navbar -->
-			</div>
-		</div>
-	</div><!-- .container -->
-</nav><!-- .site-navigation -->
-
-<div class="main-content">
-<?php // substitute the class "container-fluid" below if you want a wider content area ?>
-	<div class="container">
-		<div class="row">
-			<div id="content" class="main-content-inner col-sm-12 col-md-8">
-
