@@ -75,7 +75,7 @@ add_action( 'after_setup_theme', 'siboney_setup' );
 function siboney_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'siboney' ),
-		'id'            => 'sidebar-1',
+		'id'            => 'home-sidebar',
 		'description'	=> 'Homepage sidebar',
 		'before_widget' => '<aside id="sidebar">',
 		'after_widget'  => '</aside>',
@@ -106,10 +106,10 @@ function siboney_scripts() {
 	wp_enqueue_style( 'siboney-style', get_stylesheet_uri() );
 
 	// load bootstrap js
-	wp_enqueue_script('siboney-bootstrapjs', get_template_directory_uri().'/includes/resources/bootstrap/js/bootstrap.min.js', array('jquery') );
+	wp_enqueue_script('siboney-bootstrapjs', get_template_directory_uri() . '/includes/resources/bootstrap/js/bootstrap.min.js', array('jquery'), '', true );
 
 	// load bootstrap wp js
-	wp_enqueue_script( 'siboney-bootstrapwp', get_template_directory_uri() . '/includes/js/bootstrap-wp.js', array('jquery') );
+	wp_enqueue_script( 'siboney-bootstrapwp', get_template_directory_uri() . '/includes/js/bootstrap-wp.js', array('jquery'), '', true );
 
 	wp_enqueue_script( 'siboney-skip-link-focus-fix', get_template_directory_uri() . '/includes/js/skip-link-focus-fix.js', array(), '20130115', true );
 

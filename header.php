@@ -29,33 +29,31 @@
         <div class="container">
             <div class="navbar-header">
                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-               <span class="sr-only"><?php _e('Toggle navigation','siboney') ?> </span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
+                 <span class="sr-only"><?php _e('Toggle navigation','siboney') ?> </span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
                </button>
                <a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>">
                <!--<img src="img/peaceful_yan.png" class="logo" alt="site logo">-->
                <?php if ( has_site_icon() ) : ?>
-					<?php $site_icon = esc_url( get_site_icon_url( 75 ) ); ?>
-					<img class="site-icon logo" src="<?php echo $site_icon; ?>" alt="site logo" >       
+					       <?php $site_icon = esc_url( get_site_icon_url( 75 ) ); ?>
+					       <img class="site-icon logo" src="<?php echo $site_icon; ?>" alt="site logo" >       
                <?php endif; ?>
                <span class="name"><?php bloginfo('name');?></span><br />
                <span class="tagline"><?php bloginfo( 'description' ); ?></span></a>
             </div><!-- end navbar-header-->
 
-            <!-- The WordPress Menu goes here -->
-			<?php wp_nav_menu(
-				array(
-					'theme_location' 	=> 'primary',
-					'container'         => 'div',
-					'container_class'   => 'collapse navbar-collapse',
-					'menu_class' 		=> 'nav navbar-nav navbar-right'
-				)
-			); ?>
+              <!-- The WordPress Menu goes here -->
+        			<?php wp_nav_menu(
+        				array(
+                  'theme_location' => 'primary',
+        					'menu_class' 		=> 'nav navbar-nav navbar-right',
+                  'container'         => 'div',
+                  'container_class'   => 'collapse navbar-collapse',
+                  'walker'    => new wp_bootstrap_navwalker()
+        				)
+        			); ?>
         </div><!-- end container -->
     </nav><!-- end navbar-->
 </header>
-
-<section class="main">
-	<div class="container">
