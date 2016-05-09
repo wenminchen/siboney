@@ -77,9 +77,9 @@ Credits:
 html {
   font-size: 62.5%; }
 
-@media (min-width: 769px) {
-  body {
-    background: url("../img/birds-cranes.png") no-repeat; } }
+/* This is a small security for too long strings titles */
+body {
+  word-wrap: break-word; }
 
 .container {
   padding: 0 2em;
@@ -105,6 +105,7 @@ hr {
 .by-line {
   padding-bottom: 12px; }
 
+/* Alignment */
 .alignleft {
   display: inline;
   float: left;
@@ -133,6 +134,8 @@ hr {
   width: 1px;
   overflow: hidden; }
 
+.screen-reader-text:hover,
+.screen-reader-text:active,
 .screen-reader-text:focus {
   background-color: #f1f1f1;
   border-radius: 3px;
@@ -242,11 +245,33 @@ blockquote {
 /*--------------------------------------------------------------
 # Images
 --------------------------------------------------------------*/
-/* make images responsive */
+/* Images and wp-captions should always fit and be responsive */
 img {
   display: inline-block;
   height: auto;
   max-width: 100%; }
+
+img[class*="wp-image-"] {
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+.wp-caption {
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  max-width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0 10px; }
+
+.wp-caption.aligncenter {
+  margin-bottom: 10px; }
+
+.wp-caption img[class*="wp-image-"] {
+  display: block; }
+
+.wp-caption .wp-caption-text {
+  text-align: center;
+  margin-top: 10px; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -456,6 +481,11 @@ button {
 
 .comment-reply-title {
   margin-bottom: 0px; }
+
+/* Nested comments? They are threaded and nested already, you just need to add your own styling to finalize!
+ * For example with some margin, like the line below ;) Delete, modify, change classes in HTML if you desire another style */
+.comment .children {
+  margin-left: 1.5em; }
 
 /* 3. LAYOUTS - Page layout styles */
 /*--------------------------------------------------------------

@@ -5,10 +5,9 @@ html {
   font-size: 62.5%;
 }
 
+/* This is a small security for too long strings titles */
 body {
-    @media (min-width: $screen-sm-min + 1) {
-      background: url("../img/birds-cranes.png") no-repeat;
-    }
+  word-wrap: break-word;
 }
 
 .container {
@@ -42,6 +41,7 @@ hr {
   padding-bottom: 12px;
 }
 
+/* Alignment */
 .alignleft {
   display: inline;
   float: left;
@@ -58,4 +58,3 @@ hr {
   clear: both;
   @include center-block;
 }
-

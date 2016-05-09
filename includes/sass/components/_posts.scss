@@ -40,3 +40,7 @@
 .comment-reply-title {
   margin-bottom: 0px;
 }
+
+/* Nested comments? They are threaded and nested already, you just need to add your own styling to finalize!
+ * For example with some margin, like the line below ;) Delete, modify, change classes in HTML if you desire another style */
+ .comment .children { margin-left: 1.5em; }

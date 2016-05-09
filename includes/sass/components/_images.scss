@@ -1,9 +1,31 @@
 /*--------------------------------------------------------------
 # Images
 --------------------------------------------------------------*/
-/* make images responsive */
+/* Images and wp-captions should always fit and be responsive */
 img {
 	display: inline-block;
- 	height: auto;
- 	max-width: 100%;
+	height: auto;
+	max-width: 100%;
+}
+img[class*="wp-image-"] {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.wp-caption {
+	border: 1px solid #ccc;
+	margin-bottom: 10px;
+	max-width: 100%;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 0 10px;
+}
+.wp-caption.aligncenter {
+	margin-bottom: 10px;
+}
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+}
+.wp-caption .wp-caption-text {
+	text-align: center;
+	margin-top: 10px;
 }
