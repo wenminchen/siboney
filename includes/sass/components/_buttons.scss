@@ -15,6 +15,14 @@
   }
 }
 
+//add link style for button links for wordpress
+.btn-primary {
+  a, 
+  a:visited {
+  color: #fff;
+  }
+}
+
 .btn-submit {
 	margin-top: 1em;
 }
@@ -24,7 +32,7 @@
   	padding-top: 1.5em;
   	padding-right: 1em;
   a {
-    background: url('../img/arrows.png') no-repeat -3px -5px;
+    background: url('http://127.0.0.1/siboney/wp-content/uploads/sites/13/2016/04/arrows.png') no-repeat -3px -5px;
     width: 94px;
     height: 19px;
     overflow: hidden;
@@ -33,8 +41,24 @@
     white-space: nowrap;
   }
   a:hover {
-    background: url('../img/arrows.png') no-repeat -3px -35px;
+    background: url('http://127.0.0.1/siboney/wp-content/uploads/sites/13/2016/04/arrows.png') no-repeat -3px -35px;
     width: 94px;
     height: 19px;
+  }
+}
+
+//Submit button for comments in wordpress
+#submit {
+  background-color: $color_bg-button;
+  color: $color_border-button;
+  @include add-border(2px, $color_border-button, all);
+  &:visited {
+    background-color: $color_bg-button;
+    @include add-border(2px, $color_border-button, all);
+  }
+  &:focus,
+  &:hover{
+    background:$color_bg-button-hover; 
+    @include add-border(2px, $color_border-button, all);
   }
 }

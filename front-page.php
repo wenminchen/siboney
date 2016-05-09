@@ -19,7 +19,7 @@ get_header(); ?>
 			<div class="col-md-4">
             	<aside id="sidebar">
                 	<h3 class="screen-reader-text">Sidebar</h3>
-					<?php get_sidebar(); ?>
+					<?php get_sidebar('front'); ?>
 				</aside><!-- end sidebar -->
             </div><!-- end col-md-4 -->	  
 
@@ -30,6 +30,4 @@ get_header(); ?>
 	 			</section><!-- end featured section -->
 			</div><!-- end col-md-7 -->
 		</div><!-- end row -->
-    </div><!-- end container -->
-</section><!-- end main section -->
 <?php get_footer(); ?>

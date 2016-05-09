@@ -2,41 +2,30 @@
 /**
  * The template for displaying the blog listing page.
  *
- *
  * @package siboney
  */
+
 get_header(); ?>
 
-    <section id="main-gray">
-      <div class="container">
-        <article class="blog">
-          <div class="row">
-            
-            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-      
-            <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-            <h2><?php echo strip_tags(get_the_excerpt()); ?></h2>
-            <ul class="post-meta no-bullet">
-              <li class="author">
-                <span class="wpt-avatar small">
-                  <?php echo get_avatar(get_the_author_meta( 'ID'), 24); ?>
-                </span>
-                by <?php the_author_posts_link(); ?>
-              </li>
-              <li class="cat">in <?php the_category( ' ' ); ?></li>
-              <li class="date">in <?php the_time( 'F j, Y'); ?></li>
-              </ul>
-              <?php if( get_the_post_thumbnail() ) : ?>
-              <div class="img-container">
-                <?php the_post_thumbnail( 'large' ); ?>
-              </div>
-            <?php endif; ?>
+<section id="main">
+    <h2 class="screen-reader-text">Main content</h2>
+    <div class="container">
+      <article class="blog">
+        <div class="row">
+			    <div class="col-lg-3 col-md-4 col-sm-5 hidden-xs">
+            <aside id="sidebar">
+              <h3 class="screen-reader-text">Sidebar</h3>
+              <?php get_sidebar('blog'); ?>
+            </aside><!-- end sidebar -->
+          </div><!-- end col-md-3 --> 
 
-    <?php endwhile; else : ?>
-    <p><?php _e( 'Sorry, no page found.' ); ?></p>
-    <?php endif; ?>
-    </div>
-      </div>
-
+          <div class="col-lg-9 col-md-8 col-sm-7">
+            <article id="blog">
+              <h3 class="screen-reader-text">Blog Listing</h3>
+    					<?php get_template_part( 'content', 'blog' ); ?>
+    	 			</article><!-- end article blog -->
+    			</div><!-- end col-md-9 -->
+		    </div><!-- end row -->
+      </article><!-- end article -->
 
 <?php get_footer(); ?>

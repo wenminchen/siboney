@@ -7,8 +7,8 @@
 
 get_header(); ?>
 
-	<?php // add the class "panel" below here to wrap the content-padder in Bootstrap style ;) ?>
-	<section class="content-padder error-404 not-found">
+	<section id="main-gray">
+      <div class="container">
 
 		<header>
 			<h2 class="page-title"><?php _e( 'Oops! Something went wrong here.', 'siboney' ); ?></h2>
@@ -24,5 +24,4 @@ get_header(); ?>
 
 	</section><!-- .content-padder -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

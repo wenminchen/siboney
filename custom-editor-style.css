@@ -1,0 +1,48 @@
+.read-more {
+  text-align: right;
+  padding-top: 1.5em;
+  padding-right: 1em; }
+  .read-more a {
+    background: url("http://127.0.0.1/siboney/wp-content/uploads/sites/13/2016/04/arrows.png") no-repeat -3px -5px;
+    width: 94px;
+    height: 19px;
+    overflow: hidden;
+    display: inline-block;
+    text-indent: 100%;
+    white-space: nowrap; }
+  .read-more a:hover {
+    background: url("http://127.0.0.1/siboney/wp-content/uploads/sites/13/2016/04/arrows.png") no-repeat -3px -35px;
+    width: 94px;
+    height: 19px; }
+
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.btn-primary {
+  background-color: #6a6a6a;
+  border: 2px solid #fff; }
+  .btn-primary:visited {
+    background-color: #6a6a6a;
+    border: 2px solid #fff;}
+  .btn-primary:focus, .btn-primary:hover {
+    background: #27bec7;
+    border: 2px solid #fff;} 

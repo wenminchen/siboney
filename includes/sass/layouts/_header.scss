@@ -7,6 +7,7 @@
   @media (min-width: $screen-sm-min + 1) {
     height: 130px;
   }
+  z-index: 99999;
 }
 
 .header a {

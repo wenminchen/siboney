@@ -27,14 +27,18 @@
 }
 
 .navbar-nav{
-  background-color: $color_bg-featured;
+  background-color: $color_bg-body;
+  border: 2px solid $color_bg-featured;
   float: right;
+  margin-right: 15px;
   position: relative;
-  width: 125px;
+  width: 135px;
   z-index: 99999999;
   @media (min-width: $screen-sm-min + 1) {
-    background-color: $color_bg-header;
-    width: 375px;
+   background-color: $color_bg-header;
+   border: none;
+   margin-right: 0;
+   width: 375px;
   }
 }
 
@@ -55,6 +59,7 @@ span.page-numbers {
 .paging-navigation .current {
     font-weight: bold;
 }
+
 
 
 

@@ -35,11 +35,12 @@
                  <span class="icon-bar"></span>
                </button>
                <a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>">
-               <!--<img src="img/peaceful_yan.png" class="logo" alt="site logo">-->
+               
                <?php if ( has_site_icon() ) : ?>
 					       <?php $site_icon = esc_url( get_site_icon_url( 75 ) ); ?>
 					       <img class="site-icon logo" src="<?php echo $site_icon; ?>" alt="site logo" >       
                <?php endif; ?>
+               
                <span class="name"><?php bloginfo('name');?></span><br />
                <span class="tagline"><?php bloginfo( 'description' ); ?></span></a>
             </div><!-- end navbar-header-->

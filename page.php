@@ -13,13 +13,14 @@
 get_header(); ?>
 
 	<section id="main-gray">
-      <div class="container">
-		<?php while ( have_posts() ) : the_post(); ?>
+		<h2 class="screen-reader-text">Main content</h2>
+      	<div class="container">
+		
+			<?php while ( have_posts() ) : the_post(); 
 
-			<?php get_template_part( 'content', 'page' ); ?>
+				get_template_part( 'content', 'page' ); 
 
-		<?php endwhile; // end of the loop. ?>
-	  </div>
-	</section>
+				endwhile; 
+			?>
 	
 <?php get_footer(); ?>

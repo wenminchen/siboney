@@ -8,5 +8,8 @@
 
 .featured a {
   color: $color_link-featured;
+  &:hover {
+    color: $color_link-hover;
+  }
 }
 

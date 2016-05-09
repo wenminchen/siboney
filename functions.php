@@ -1,3 +1,4 @@
+
 <?php
 /**
  * siboney functions and definitions
@@ -72,18 +73,20 @@ add_action( 'after_setup_theme', 'siboney_setup' );
 /**
  * Register widgetized area and update sidebar with default widgets
  */
-function siboney_widgets_init() {
+function siboney_widgets_init($name, $id, $description ) {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'siboney' ),
-		'id'            => 'home-sidebar',
-		'description'	=> 'Homepage sidebar',
+		'name'          => __( $name, 'siboney' ),
+		'id'            => $id,
+		'description'	=> $description,
 		'before_widget' => '<aside id="sidebar">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
+		'before_title'  => '<h2>',
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'siboney_widgets_init' );
+//add_action( 'widgets_init', 'siboney_widgets_init' );
+siboney_widgets_init( 'Front Sidebar', 'front', 'Displays on the side of home page' );
+siboney_widgets_init( 'Blog Sidebar', 'blog', 'Displays on the side of blog listing page' );
 
 /**
  * Enqueue scripts and styles
@@ -131,6 +134,49 @@ function siboney_scripts() {
 	wp_script_add_data( 'siboney-respondjs', 'conditional', 'lt IE 9' );
 }
 add_action( 'wp_enqueue_scripts', 'siboney_scripts' );
+
+/**
+ * Add editor style (see http://www.wpbeginner.com/wp-tutorials/how-to-add-custom-styles-to-wordpress-visual-editor/)
+ */
+
+function siboney_add_editor_styles() {
+    add_editor_style( 'custom-editor-style.css' );
+}
+add_action( 'init', 'siboney_add_editor_styles' );
+
+/**
+ * Exclude category from archive
+ */
+define("EXCLUDED_CATEGORIES", '3');
+
+add_filter( 'getarchives_join' , 'getarchives_join_filter');
+function getarchives_join_filter( $join ) {
+	global $wpdb;
+	return $join . " INNER JOIN {$wpdb->term_relationships} tr ON ($wpdb->posts.ID = tr.object_id) INNER JOIN {$wpdb->term_taxonomy} tt ON (tr.term_taxonomy_id = tt.term_taxonomy_id)";
+}
+
+add_filter( 'getarchives_where' , 'getarchives_where_filter');
+function getarchives_where_filter( $where ) {
+	global $wpdb;
+
+	$exclude = EXCLUDED_CATEGORIES; // category ids to exclude
+	return $where . " AND tt.taxonomy = 'category' AND tt.term_id NOT IN ($exclude)";
+
+	}
+
+// exclude categories on monthly archive pages
+function my_post_queries( $query ) {
+	// do not alter the query on wp-admin pages and only alter it if it's the main query
+	if (!is_admin() && $query->is_main_query()){
+
+		// alter the query for monthly archive pages
+		if(is_archive() && is_month()){
+			$query->set('category__not_in', array(EXCLUDED_CATEGORIES));
+		}
+	}
+}
+
+add_action( 'pre_get_posts', 'my_post_queries' );
 
 /**
  * Implement the Custom Header feature.

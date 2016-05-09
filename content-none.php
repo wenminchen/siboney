@@ -8,9 +8,9 @@
  */
 ?>
 
-<section class="no-results not-found">
+<section id="main-gray" class="no-results not-found">
 	<header>
-		<h1 class="page-title"><?php _e( 'Nothing Found', 'siboney' ); ?></h1>
+		<h2 class="page-title"><?php _e( 'Nothing Found', 'siboney' ); ?></h2>
 	</header><!-- .page-header -->
 
 	<div class="page-content">

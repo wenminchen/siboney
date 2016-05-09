@@ -3,6 +3,9 @@
 --------------------------------------------------------------*/
 #sidebar {
 	margin: 0 0 2em;
+	ul {
+		padding: 15px;
+	}
 }
 
 .sidebar-featured {
@@ -11,4 +14,22 @@
     h2{
         font-family: $font_nav;
     }
+}
+
+.search-field,
+.search-submit {
+	vertical-align: top;
+}
+
+.search-field {
+	width: 165px;
+}
+
+.search-submit {
+	background-color: $color_bg-body;
+	border: none;
+}
+
+.cat-post-item img {
+	padding-bottom: 4px;
 }

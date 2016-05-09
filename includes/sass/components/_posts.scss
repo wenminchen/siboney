@@ -1,0 +1,42 @@
+/*--------------------------------------------------------------
+# Posts
+--------------------------------------------------------------*/
+.post {
+  margin-bottom: 30px;
+  h2 {
+  	a,
+  	a:visited {
+  		color: $color_text-headings;
+  	}
+    a:hover {
+      color: $color_link-hover;
+    }
+  }
+  ul {
+	padding-left:0;
+	}
+}
+
+.by-line {
+  padding-bottom: 10px;
+}
+
+.post-meta {
+	li {
+	  display: inline-block;
+	}
+}
+
+.page-title {
+  font-style: italic;
+  padding-bottom: 10px;
+}
+
+.comment-list {
+  list-style:none;
+  padding-left:0;
+}
+
+.comment-reply-title {
+  margin-bottom: 0px;
+}
