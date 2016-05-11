@@ -7,7 +7,7 @@ Description: Siboney is a clean, modern theme with beautiful fonts designed and 
 Version: 0.0.1
 License: GNU General Public License v3.0 /
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Tags: 
+Tags: gray, white, responsive-layout, custom-menu, featured-images
 
 This theme, like WordPress, is licensed under the GPL.
 
@@ -101,9 +101,6 @@ a {
 hr {
   background-color: #bfbfbf;
   height: 1px; }
-
-.by-line {
-  padding-bottom: 12px; }
 
 /* Alignment */
 .alignleft {
@@ -255,7 +252,8 @@ img[class*="wp-image-"] {
   margin-top: 10px;
   margin-bottom: 10px; }
 
-.wp-caption {
+.wp-caption,
+.gallery-caption {
   border: 1px solid #ccc;
   margin-bottom: 10px;
   max-width: 100%;
@@ -272,6 +270,18 @@ img[class*="wp-image-"] {
 .wp-caption .wp-caption-text {
   text-align: center;
   margin-top: 10px; }
+
+/* WP Gallery*/
+.gallery {
+  margin-bottom: 1.5em; }
+
+.gallery a img {
+  border: none;
+  height: auto;
+  max-width: 90%; }
+
+.gallery dd {
+  margin: 0; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -349,7 +359,7 @@ span.page-numbers {
   padding-top: 1.5em;
   padding-right: 1em; }
   .read-more a {
-    background: url("http://127.0.0.1/siboney/wp-content/uploads/sites/13/2016/04/arrows.png") no-repeat -3px -5px;
+    background: url("includes/img/arrows.png") no-repeat -3px -5px;
     width: 94px;
     height: 19px;
     overflow: hidden;
@@ -357,7 +367,7 @@ span.page-numbers {
     text-indent: 100%;
     white-space: nowrap; }
   .read-more a:hover {
-    background: url("http://127.0.0.1/siboney/wp-content/uploads/sites/13/2016/04/arrows.png") no-repeat -3px -35px;
+    background: url("includes/img/arrows.png") no-repeat -3px -35px;
     width: 94px;
     height: 19px; }
 
@@ -474,6 +484,15 @@ button {
 .page-title {
   font-style: italic;
   padding-bottom: 10px; }
+
+.hentry {
+  margin: 0 0 1.5em; }
+
+.sticky {
+  display: block; }
+
+.bypostauthor {
+  display: block; }
 
 .comment-list {
   list-style: none;

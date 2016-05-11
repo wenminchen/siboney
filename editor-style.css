@@ -3,7 +3,7 @@
   padding-top: 1.5em;
   padding-right: 1em; }
   .read-more a {
-    background: url("http://127.0.0.1/siboney/wp-content/uploads/sites/13/2016/04/arrows.png") no-repeat -3px -5px;
+    background: url("includes/img/arrows.png") no-repeat -3px -5px;
     width: 94px;
     height: 19px;
     overflow: hidden;
@@ -11,7 +11,7 @@
     text-indent: 100%;
     white-space: nowrap; }
   .read-more a:hover {
-    background: url("http://127.0.0.1/siboney/wp-content/uploads/sites/13/2016/04/arrows.png") no-repeat -3px -35px;
+    background: url("includes/img/arrows.png") no-repeat -3px -35px;
     width: 94px;
     height: 19px; }
 
@@ -46,3 +46,4 @@
   .btn-primary:focus, .btn-primary:hover {
     background: #27bec7;
     border: 2px solid #fff;} 
+

@@ -11,7 +11,8 @@ img[class*="wp-image-"] {
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
-.wp-caption {
+.wp-caption, 
+.gallery-caption {
 	border: 1px solid #ccc;
 	margin-bottom: 10px;
 	max-width: 100%;
@@ -29,3 +30,17 @@ img[class*="wp-image-"] {
 	text-align: center;
 	margin-top: 10px;
 }
+
+/* WP Gallery*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+.gallery a img {
+	border: none;
+	height: auto;
+	max-width: 90%;
+}
+.gallery dd {
+	margin: 0;
+}
+

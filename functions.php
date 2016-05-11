@@ -7,7 +7,8 @@
  */
 
 /**
- * Set the content width based on the theme's design and stylesheet.
+ * Set the content width based on the theme's design and stylesheet. This only affects images and videos.
+ * The largest images for this theme has width = 700px and thus the $content_width was set to 700px.
  */
 if ( ! isset( $content_width ) )
 	$content_width = 700; /* pixels */
@@ -41,7 +42,12 @@ function siboney_setup() {
 	/**
 	 * Enable support for Post Formats
 	*/
-	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
+	//add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
+
+	/**
+	 * Enable support for title-tag (required for WordPress 4.1 and above)
+	*/
+	add_theme_support( "title-tag" );
 
 	/**
 	 * Setup the WordPress core custom background feature.
@@ -73,20 +79,28 @@ add_action( 'after_setup_theme', 'siboney_setup' );
 /**
  * Register widgetized area and update sidebar with default widgets
  */
-function siboney_widgets_init($name, $id, $description ) {
+function siboney_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( $name, 'siboney' ),
-		'id'            => $id,
-		'description'	=> $description,
+		'name'          => __( 'Front Sidebar', 'siboney' ),
+		'id'            => 'front',
+		'description'	=> 'Displays on the side of home page',
+		'before_widget' => '<aside id="sidebar">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Blog Sidebar', 'siboney' ),
+		'id'            => 'blog',
+		'description'	=> 'Displays on the side of blog listing page',
 		'before_widget' => '<aside id="sidebar">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2>',
 		'after_title'   => '</h2>',
 	) );
 }
-//add_action( 'widgets_init', 'siboney_widgets_init' );
-siboney_widgets_init( 'Front Sidebar', 'front', 'Displays on the side of home page' );
-siboney_widgets_init( 'Blog Sidebar', 'blog', 'Displays on the side of blog listing page' );
+add_action( 'widgets_init', 'siboney_widgets_init' );
 
 /**
  * Enqueue scripts and styles
@@ -102,7 +116,7 @@ function siboney_scripts() {
 	// load Font Awesome css
 	wp_enqueue_style( 'siboney-font-awesome', get_template_directory_uri() . '/includes/css/font-awesome.min.css', false, '4.1.0' );
 
-	//Add Amatic SC, Josefin Sans, and Open Sans google fonts
+	//Add google fonts
 	wp_enqueue_style( 'siboney-google-fonts', 'https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Josefin+Sans:400,600italic|Open+Sans');
 
 	// load siboney styles
@@ -136,16 +150,8 @@ function siboney_scripts() {
 add_action( 'wp_enqueue_scripts', 'siboney_scripts' );
 
 /**
- * Add editor style (see http://www.wpbeginner.com/wp-tutorials/how-to-add-custom-styles-to-wordpress-visual-editor/)
- */
-
-function siboney_add_editor_styles() {
-    add_editor_style( 'custom-editor-style.css' );
-}
-add_action( 'init', 'siboney_add_editor_styles' );
-
-/**
- * Exclude category from archive
+ * Exclude posts with Home Slider category from archive.
+ * The Home Slider category posts are used for the sole purpose of creating homepage carousel and are therefore excluded.
  */
 define("EXCLUDED_CATEGORIES", '3');
 
@@ -165,7 +171,7 @@ function getarchives_where_filter( $where ) {
 	}
 
 // exclude categories on monthly archive pages
-function my_post_queries( $query ) {
+function siboney_post_queries( $query ) {
 	// do not alter the query on wp-admin pages and only alter it if it's the main query
 	if (!is_admin() && $query->is_main_query()){
 
@@ -176,7 +182,7 @@ function my_post_queries( $query ) {
 	}
 }
 
-add_action( 'pre_get_posts', 'my_post_queries' );
+add_action( 'pre_get_posts', 'siboney_post_queries' );
 
 /**
  * Implement the Custom Header feature.

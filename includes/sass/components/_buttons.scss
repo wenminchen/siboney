@@ -19,7 +19,7 @@
 .btn-primary {
   a, 
   a:visited {
-  color: #fff;
+  color: $color_text_button;
   }
 }
 
@@ -32,7 +32,7 @@
   	padding-top: 1.5em;
   	padding-right: 1em;
   a {
-    background: url('http://127.0.0.1/siboney/wp-content/uploads/sites/13/2016/04/arrows.png') no-repeat -3px -5px;
+    background: url('includes/img/arrows.png') no-repeat -3px -5px;
     width: 94px;
     height: 19px;
     overflow: hidden;
@@ -41,7 +41,7 @@
     white-space: nowrap;
   }
   a:hover {
-    background: url('http://127.0.0.1/siboney/wp-content/uploads/sites/13/2016/04/arrows.png') no-repeat -3px -35px;
+    background: url('includes/img/arrows.png') no-repeat -3px -35px;
     width: 94px;
     height: 19px;
   }

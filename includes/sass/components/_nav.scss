@@ -52,8 +52,8 @@
 
 a.page-numbers,
 span.page-numbers {
-     padding: .3em .7em;
-     border: 1px solid $color_text-logo;
+  padding: .3em .7em;
+  @include add-border(1px, $color_text-logo, all);
 }
 
 .paging-navigation .current {
