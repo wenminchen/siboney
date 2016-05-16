@@ -2,7 +2,7 @@
 # Header
 --------------------------------------------------------------*/
 .header {
-  height: 110px; 
+  min-height: 110px; 
   position: relative;
   @media (min-width: $screen-sm-min + 1) {
     height: 130px;

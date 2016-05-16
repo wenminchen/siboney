@@ -320,6 +320,11 @@ img[class*="wp-image-"] {
       margin-right: 0;
       width: 375px; } }
 
+/* Remove line above the mobile menu */
+.navbar-collapse.in,
+.collapsing {
+  border: none; }
+
 .paging-navigation ul {
   margin-top: 3em; }
 
@@ -511,7 +516,7 @@ button {
 # Header
 --------------------------------------------------------------*/
 .header {
-  height: 110px;
+  min-height: 110px;
   position: relative;
   z-index: 99999; }
   @media (min-width: 769px) {

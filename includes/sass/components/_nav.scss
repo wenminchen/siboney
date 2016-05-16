@@ -42,6 +42,12 @@
   }
 }
 
+/* Remove line above the mobile menu */
+.navbar-collapse.in,
+.collapsing {
+  border: none;
+}
+
 .paging-navigation ul {
     margin-top: 3em;
 }
