@@ -38,4 +38,5 @@ Credits:
 
  * https://fortawesome.github.io/Font-Awesome/
 
+5. Google Fonts (https://www.google.com/fonts)
 *************************************************************
