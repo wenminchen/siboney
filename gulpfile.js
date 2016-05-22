@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     minifycss = require('gulp-minify-css'),
     rename = require('gulp-rename');
 
+/* Task to compile sass */
 gulp.task('styles',function(){
 	return gulp.src('./includes/sass/style.scss')
 		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
@@ -14,8 +15,10 @@ gulp.task('styles',function(){
 		.pipe(gulp.dest('./includes/css/'));
 });
 
+/* Task to watch sass changes */
 gulp.task('watch', function () {
   gulp.watch('./includes/sass/**/*.scss', ['styles']);
 });
 
+/* Task when running `gulp` from terminal */
 gulp.task('default', ['styles', 'watch']);
