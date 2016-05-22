@@ -1,3 +1,11 @@
+<?php
+/**
+ * The template used for displaying modals on all pages
+ *
+ * @package siboney
+ */
+?>
+
 <!-- modal windows -->
     <div id="slider1" class="modal fade" tabindex="-1">
       <div class="modal-dialog">

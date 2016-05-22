@@ -2,6 +2,7 @@
 /**
  * The template used for displaying blog listings in blog listing page
  * Code based on http://www.wpbeginner.com/wp-themes/how-to-create-a-grid-display-of-post-thumbnails-in-wordpress-themes/
+ * 
  * @package siboney
  */
 ?>
