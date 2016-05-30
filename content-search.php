@@ -1,6 +1,5 @@
 <?php
 /**
- * Code for second featured image (http://ankitpokhrel.com/explore/get-more-out-of-featured-images-with-dynamic-featured-image-plugin/)
  * @package siboney
  */
 ?>
